@@ -3,39 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7-Day Python Refresher Plan</title>
-    <link rel="stylesheet" href="style.css">
+    <title>7-Day Python Refresh Plan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and code blocks */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+            color: #334155; /* Dark slate gray for text */
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #2d3748; /* Darker background for code blocks */
+            color: #edf2f7; /* Light text for code */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto; /* Enable horizontal scrolling for long lines */
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #4c51bf; /* Indigo for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s ease-in-out;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        .header-bg {
+            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Purple to Indigo gradient */
+        }
+    </style>
+    <!-- Google Fonts for Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>7-Day Python Refresher Plan</h1>
-        <p>From basics to mini-projects with free resources!</p>
-    </header>
+<body class="antialiased">
+    <div class="header-bg py-10 shadow-lg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4 rounded-xl p-4 inline-block">
+                🚀 7-Day Python Refresh Plan 🚀
+            </h1>
+            <p class="text-xl text-indigo-100 italic">
+                From Scratch to Proficiency – Your Daily Guide to Mastering Python
+            </p>
+        </div>
+    </div>
 
-    <main>
-        <section class="plan">
-            <div class="day" id="day1">
-                <h2>Day 1: Python Basics</h2>
-                <ul>
-                    <li>Variables, Data Types, I/O</li>
-                    <li>Operators, Type Conversion</li>
-                </ul>
-                <div class="example">
-                    <h3>Example: Area of Circle</h3>
-                    <pre><code>radius = float(input("Enter radius: "))
+    <div class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+
+        <!-- Introduction -->
+        <div class="section-card text-center mb-8">
+            <p class="text-lg text-gray-700">
+                Welcome to your structured 7-day plan to refresh your Python skills from scratch! Each day focuses on key topics, providing hands-on examples and valuable free resources to guide your learning journey. Let's dive in!
+            </p>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="section-card">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-indigo-300">Day 1: Python Basics & Syntax</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Topics:</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-600">
+                <li>Variables, data types (`int`, `float`, `str`, `bool`)</li>
+                <li>Basic I/O (`print()`, `input()`)</li>
+                <li>Operators (`+`, `-`, `*`, `/`, `%`, `//`, `**`)</li>
+                <li>Type conversion</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Hands-on Example:</h3>
+            <pre><code class="language-python"># Calculate area of a circle
+radius = float(input("Enter radius: "))
 area = 3.14 * radius ** 2
-print(f"Area: {area:.2f}")</code></pre>
-                </div>
-                <a href="https://docs.python.org/3/tutorial/" target="_blank">Free Resource</a>
-            </div>
+print(f"Area of the circle: {area:.2f}")</code></pre>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Free Resources:</h3>
+            <ul class="list-disc list-inside text-gray-600">
+                <li><a href="https://docs.python.org/3/tutorial/index.html" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-700">Python Official Docs (Beginners)</a></li>
+                <li><a href="https://www.w3schools.com/python/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-700">W3Schools Python</a></li>
+            </ul>
+        </div>
 
-            <!-- Repeat for Days 2-7 (see full code in GitHub link below) -->
-        </section>
-    </main>
+        <!-- Day 2 -->
+        <div class="section-card">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-indigo-300">Day 2: Control Flow & Loops</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Topics:</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-600">
+                <li>Conditional statements (`if`, `elif`, `else`)</li>
+                <li>Loops (`for`, `while`)</li>
+                <li>`break`, `continue`, `pass`</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Hands-on Example:</h3>
+            <pre><code class="language-python"># Check if a number is prime
+num = int(input("Enter a number: "))
+is_prime = True
+for i in range(2, int(num ** 0.5) + 1):
+    if num % i == 0:
+        is_prime = False
+        break
+print(f"{num} is {'prime' if is_prime else 'not prime'}.")</code></pre>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Free Resources:</h3>
+            <ul class="list-disc list-inside text-gray-600">
+                <li><a href="https://developers.google.com/edu/python" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-700">Google’s Python Class</a></li>
+            </ul>
+        </div>
 
-    <footer>
-        <p>Made with ❤️ for Python learners</p>
-    </footer>
-    <script src="script.js"></script>
+        <!-- Day 3 -->
+        <div class="section-card">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-indigo-300">Day 3: Functions & Modules</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Topics:</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-600">
+                <li>Defining functions (`def`)</li>
+                <li>Arguments (positional, keyword, default)</li>
+                <li>Return values</li>
+                <li>Importing modules (`math`, `random`)</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Hands-on Example:</h3>
+            <pre><code class="language-python"># Generate a random password
+import random
+import string
+
+def generate_password(length=8):
+    chars = string.ascii_letters + string.digits + "!@#$%"
+    return ''.join(random.choice(chars) for _ in range(length))
+
+print("Your password:", generate_password(10))</code></pre>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Free Resources:</h3>
+            <ul class="list-disc list-inside text-gray-600">
+                <li><a href="https://realpython.com/defining-your-own-python-function/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-700">Real Python (Functions Guide)</a></li>
+            </ul>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="section-card">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-indigo-300">Day 4: Data Structures</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Topics:</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-600">
+                <li>Lists (`append`, `remove`, slicing)</li>
+                <li>Tuples (immutable)</li>
+                <li>Dictionaries (`keys`, `values`, `items`)</li>
+                <li>Sets (`union`, `intersection`)</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Hands-on Example:</h3>
+            <pre><code class="language-python"># Count word frequency in a sentence
+sentence = "hello world hello python world"
+words = sentence.split()
+frequency = {}
+
+for word in words:
+    frequency[word] = frequency.get(word, 0) + 1
+
+print(frequency)</code></pre>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Free Resources:</h3>
+            <ul class="list-disc list-inside text-gray-600">
+                <li><a href="https://www.geeksforgeeks.org/python-data-structures/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-700">Python Data Structures (GeeksforGeeks)</a></li>
+            </ul>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="section-card">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-indigo-300">Day 5: File Handling & Error Handling</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Topics:</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-600">
+                <li>Reading/writing files (`open`, `read`, `write`)</li>
+                <li>Exception handling (`try`, `except`, `finally`)</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Hands-on Example:</h3>
+            <pre><code class="language-python"># Read a file and handle exceptions
+try:
+    with open("sample.txt", "r") as file:
+        content = file.read()
+    print(content)
+except FileNotFoundError:
+    print("File not found!")</code></pre>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Free Resources:</h3>
+            <ul class="list-disc list-inside text-gray-600">
+                <li><a href="https://www.w3schools.com/python/python_file_handling.asp" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-700">Python File Handling (W3Schools)</a></li>
+            </ul>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="section-card">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-indigo-300">Day 6: Object-Oriented Programming (OOP)</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Topics:</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-600">
+                <li>Classes & objects</li>
+                <li>Inheritance & polymorphism</li>
+                <li>Magic methods (`__str__`, `__init__`)</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Hands-on Example:</h3>
+            <pre><code class="language-python"># A simple BankAccount class
+class BankAccount:
+    def __init__(self, balance=0):
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+    
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+        else:
+            print("Insufficient funds!")
+
+account = BankAccount(100)
+account.deposit(50)
+account.withdraw(30)
+print(f"Balance: ${account.balance}")</code></pre>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Free Resources:</h3>
+            <ul class="list-disc list-inside text-gray-600">
+                <li><a href="https://realpython.com/python3-object-oriented-programming/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-700">Python OOP (Real Python)</a></li>
+            </ul>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="section-card">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-indigo-300">Day 7: Mini Project (Consolidation Day)</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Apply what you learned in a small project:</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-600">
+                <li><strong>Option 1:</strong> To-Do List (CLI)</li>
+                <li><strong>Option 2:</strong> Number Guessing Game</li>
+                <li><strong>Option 3:</strong> Simple Calculator</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Example (To-Do List):</h3>
+            <pre><code class="language-python">tasks = []
+
+while True:
+    print("\n1. Add Task\n2. View Tasks\n3. Exit")
+    choice = input("Choose an option: ")
+    
+    if choice == "1":
+        task = input("Enter task: ")
+        tasks.append(task)
+    elif choice == "2":
+        print("\nTasks:")
+        for idx, task in enumerate(tasks, 1):
+            print(f"{idx}. {task}")
+    elif choice == "3":
+        break
+    else:
+        print("Invalid choice!")</code></pre>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Free Resources:</h3>
+            <ul class="list-disc list-inside text-gray-600">
+                <li><a href="https://www.freecodecamp.org/news/python-projects-for-beginners/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-700">Projects for Beginners (FreeCodeCamp)</a></li>
+            </ul>
+        </div>
+
+        <!-- Bonus Tips -->
+        <div class="section-card text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-purple-300">🌟 Bonus Tips 🌟</h2>
+            <ul class="list-disc list-inside mb-4 text-gray-700">
+                <li><strong>Practice daily</strong> on platforms like:
+                    <ul class="list-disc list-inside ml-5 text-gray-600">
+                        <li><a href="https://www.hackerrank.com/domains/tutorials/10-days-of-python" target="_blank" rel="noopener noreferrer" class="hover:text-purple-700">HackerRank (Python)</a></li>
+                        <li><a href="https://leetcode.com/problemset/all/?difficulty=EASY" target="_blank" rel="noopener noreferrer" class="hover:text-purple-700">LeetCode (Easy Problems)</a></li>
+                    </ul>
+                </li>
+                <li><strong>Join communities</strong> like <a href="https://www.reddit.com/r/learnpython/" target="_blank" rel="noopener noreferrer" class="hover:text-purple-700">r/learnpython</a> on Reddit.</li>
+            </ul>
+            <p class="text-xl font-semibold text-gray-800 mt-6">
+                Happy coding and enjoy your Python journey! 🐍
+            </p>
+        </div>
+
+    </div>
 </body>
 </html>
